@@ -23,9 +23,6 @@
 			],
 			slideTimer	:	4000
 		});
-		window.setTimeout(function(){
-			$('#leftContainer').fullsizeGallery('nextSlideshow').fullsizeGallery('startSlideshow');
-		},2000);
 		
 		$('#rightContainer').fullsizeGallery({
 			images		:	[
@@ -35,9 +32,16 @@
 				{	url: 'img/09.jpg'	},
 				{	url: 'img/10.jpg'	}
 			],
-			slideTimer	:	4000,
-			autostart	:	true
+			slideTimer	:	4000
 		});
+
+		window.setTimeout(function(){
+			$('#leftContainer').fullsizeGallery('nextSlide').fullsizeGallery('startSlideshow');
+		},2000);
+
+		window.setTimeout(function(){
+			$('#rightContainer').fullsizeGallery('nextSlide').fullsizeGallery('startSlideshow');
+		},4000);
 
 	})
 
