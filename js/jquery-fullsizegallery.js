@@ -98,6 +98,8 @@
 				// bind handler for jumping to slide
 				obj.bind( 'gotoSlide.'+ns, function( ev, img_index ) {
 					var items = list.find('li');
+					if( items.length<=img_index || obj.data('currentSlide')==img_index )
+						return;
 					items.not('.current').css('z-index',0).hide();
 					obj.data('currentSlide',img_index);
 					options.hideFunc( items.filter('.current').css('z-index',1).removeClass('current') );

@@ -133,6 +133,14 @@ article li a {
 	font-weight:bold;
 }
 
+article li label {
+	color:#333;
+}
+
+article li select {
+	font-weight:bold;
+}
+
 article li span {
 	color:#333;
 	font-size:.85em;
