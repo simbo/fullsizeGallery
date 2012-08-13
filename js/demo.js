@@ -10,7 +10,8 @@
 $(document).ready(function(){
 
 	$('article').each(function(){
-
+		
+		// bind minimize and maximize events on article
 		$(this).bind({
 			'minimize'	:	function(ev){
 				$(this).data('origHeight',$(this).height()).animate({
@@ -36,16 +37,21 @@ $(document).ready(function(){
 				})
 			}
 		});
+		
+		// insert minimize trigger element
 		$(this).find('footer').append(
 			$('<p/>').append([
 				$('<br/>')[0],
 				$('<span>[ </span>')[0],
 				$('<a href="#">minimize</a>').click(function(ev){
+					ev.preventDefault();
 					$(this).closest('article').trigger('minimize');
 				})[0],
 				$('<span> ]</span>')[0],
 			])
 		);
+		
+		// insert maximize trigger element
 		$(this).append(
 			$('<div id="maximize">&hearts;</div>').click(function(ev){
 				ev.preventDefault();
