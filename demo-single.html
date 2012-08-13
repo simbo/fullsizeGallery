@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>fullsizeGallery Demo: Simple Fullsceen</title>
+	<link rel="stylesheet" href="css/demo.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/fullsizegallery.css" type="text/css" media="all" />
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/modernizr-shiv.js"></script>
+	<script type="text/javascript" src="js/jquery-fullsizegallery.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('body').fullsizeGallery({
+			images	:	[{	url: 'img/04.jpg'	}]
+		})
+
+	})
+
+	</script>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>fullsize<span>Gallery</span></h1>
+		</header>
+		<section>
+			<h2><span>Demo:</span> Simple Fullscreen</h2>
+			<p>A single image using <code>body</code> as container.</p>
+		</section>
+		<section class="back">
+			<p>&larr; <a href="demo.html" title="Return to demo index">back</a></p>
+		</section>
+		<footer>
+			<p><em>fullsizeGallery</em> is licensed under <a href="http://www.gnu.org/licenses/gpl-3.0" title="GPL v3">GPL v3</a>.</p>
+			<p>The images used in the demo are from <a href="http://suicidegirls.com" title="Suicide Girls - Beautiful naked girls with tattoos">SuicideGirls.com</a>.</p>
+		</footer>
+	</article>
+</body>
+</html>

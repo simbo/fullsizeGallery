@@ -1,0 +1,140 @@
+
+
+/* ------------------------------------------------------------------------ */
+/*                                                                          */
+/*  THESE STYLES ARE ONLY FOR THE DEMO AND NOT NECESSARY TO USE THE PLUGIN  */
+/*                                                                          */
+/* ------------------------------------------------------------------------ */
+
+
+body {
+	background:#000;
+	color:#333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 12px;
+	line-height:1em;
+	text-shadow: 1px 1px 0px #fff;
+	filter: dropshadow(color=#fff, offx=1, offy=1);
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+	color:#3b5998;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+code, pre {
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	color:#666;
+}
+
+article {
+	margin:4em auto;
+	width:30em;
+	background:rgba(255,255,255,.8);
+	border:1px solid rgba(180,180,180,.4);
+	overflow:hidden;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	-webkit-box-shadow:  0 1em 2em -1.4em rgba(0, 0, 0, 1);
+	        box-shadow:  0 1em 2em -1.4em rgba(0, 0, 0, 1);
+}
+
+article header,
+article section,
+article footer {
+	padding:2em;
+}
+
+article header {
+	background:rgba(180,180,180,.1);
+}
+
+article section {
+	border-top:1px dashed rgba(180,180,180,.4);
+}
+
+article section.back {
+	padding:1em 2em;
+	text-align:center;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+article footer {
+	padding:.8em 2em;
+	background:rgba(180,180,180,.2);	
+	border-top:1px dashed rgba(180,180,180,.3);
+}
+
+article h1,
+article h2 {
+	margin:0;
+	font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L",
+		"Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter",
+		"Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow",
+		"New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L",
+		Georgia, serif;
+	line-height:1.4em;
+}
+
+article h1 {
+	font-size:2.8em;
+}
+
+article h1 span {
+	opacity:.7;
+}
+
+article h2 {
+	font-size:1.4em;
+}
+
+article p,
+article ul {
+	margin:.6em 0;
+	line-height:1.4em;
+}
+
+article em {
+	font-style:italic;
+}
+
+article header p {
+	font-size:1.2em;
+}
+
+article footer p {
+	margin:0;
+	font-size:.8em;
+	opacity:.8;
+	text-align:center;
+}
+
+article ul {
+	padding:0 0 0 1.6em;
+	list-style-type:circle;
+}
+
+article li {
+	margin:.8em 0;
+	color:#888;
+}
+
+article li a {
+	display:block;
+	font-weight:bold;
+}
+
+article li span {
+	color:#333;
+	font-size:.85em;
+	line-height:1.2em;
+}

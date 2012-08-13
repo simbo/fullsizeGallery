@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>fullsizeGallery Demos</title>
+	<link rel="stylesheet" href="css/demo.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/fullsizegallery.css" type="text/css" media="all" />
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/modernizr-shiv.js"></script>
+	<script type="text/javascript" src="js/jquery-fullsizegallery.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('body').fullsizeGallery({
+			images:	[
+				{	url: 'img/01.jpg'	},
+				{	url: 'img/02.jpg'	},
+				{	url: 'img/03.jpg'	},
+				{	url: 'img/04.jpg'	},
+				{	url: 'img/05.jpg'	},
+				{	url: 'img/06.jpg'	},
+				{	url: 'img/07.jpg'	},
+				{	url: 'img/08.jpg'	},
+				{	url: 'img/09.jpg'	},
+				{	url: 'img/10.jpg'	}
+			],
+			firstImage: Math.round(Math.random()*9),
+			slideTimer: 4000,
+			autostart: true
+		})
+
+	})
+
+	</script>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>fullsize<span>Gallery</span></h1>
+			<p>&hellip; is a jQuery plugin by <a href="http://simbo.de" title="Simbo.de">Simon Lepel</a> for displaying a fullsize image or gallery in any HTML container.</p>
+		</header>
+		<section>
+			<h2>Demos</h2>
+			<ul>
+				<li>
+					<a href="demo-single.html" title="">Simple Fullscreen</a>
+					<span>single image using <code>body</code> as container</span>
+				</li><li>
+					<a href="demo-slideshow.html" title="">Fullscreen Slideshow</a>
+					<span>slideshow with custom effects and optimized performance</span>
+				</li><li>
+					<a href="demo-gallery.html" title="">Fullscreen Gallery</a>
+					<span>slideshow with multiple controls</span>
+				</li><li>
+					<a href="demo-splitscreen.html" title="">Two Slideshows on Splitscreen</a>
+					<span>two independent slideshows in separated <code>div</code> containers</span>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Info</h2>
+			<p>Sources and Docs can be found at <a href="" title="">GitHub</a>.</p>
+		</section>
+		<footer>
+			<p><em>fullsizeGallery</em> is licensed under <a href="http://www.gnu.org/licenses/gpl-3.0" title="GPL v3">GPL v3</a>.</p>
+			<p>The images used in the demo are from <a href="http://suicidegirls.com" title="Suicide Girls - Beautiful naked girls with tattoos">SuicideGirls.com</a>.</p>
+		</footer>
+	</article>
+</body>
+</html>

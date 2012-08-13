@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>fullsizeGallery Demo: Two Slideshows on Splitscreen</title>
+	<link rel="stylesheet" href="css/demo.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/fullsizegallery.css" type="text/css" media="all" />
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/modernizr-shiv.js"></script>
+	<script type="text/javascript" src="js/jquery-fullsizegallery.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('#leftContainer').fullsizeGallery({
+			images		:	[
+				{	url: 'img/01.jpg'	},
+				{	url: 'img/02.jpg'	},
+				{	url: 'img/03.jpg'	},
+				{	url: 'img/04.jpg'	},
+				{	url: 'img/05.jpg'	}
+			],
+			slideTimer	:	4000
+		});
+		window.setTimeout(function(){
+			$('#leftContainer').fullsizeGallery('nextSlideshow').fullsizeGallery('startSlideshow');
+		},2000);
+		
+		$('#rightContainer').fullsizeGallery({
+			images		:	[
+				{	url: 'img/06.jpg'	},
+				{	url: 'img/07.jpg'	},
+				{	url: 'img/08.jpg'	},
+				{	url: 'img/09.jpg'	},
+				{	url: 'img/10.jpg'	}
+			],
+			slideTimer	:	4000,
+			autostart	:	true
+		});
+
+	})
+
+	</script>
+	<style type="text/css">
+		#leftContainer,
+		#rightContainer {
+			position:fixed !important;
+			position:absolute;
+			top:0;
+			left:0;
+			width:50%;
+			height:100%;
+			z-index:-10;
+		}
+		#rightContainer {
+			left:50%;
+		}
+	</style>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>fullsize<span>Gallery</span></h1>
+		</header>
+		<section>
+			<h2><span>Demo:</span> Two Slideshows on Splitscreen</h2>
+			<p>Two independent slideshows in separated <code>div</code> containers with alternately changing slides.</p>
+		</section>
+		<section class="back">
+			<p>&larr; <a href="demo.html" title="Return to demo index">back</a></p>
+		</section>
+		<footer>
+			<p><em>fullsizeGallery</em> is licensed under <a href="http://www.gnu.org/licenses/gpl-3.0" title="GPL v3">GPL v3</a>.</p>
+			<p>The images used in the demo are from <a href="http://suicidegirls.com" title="Suicide Girls - Beautiful naked girls with tattoos">SuicideGirls.com</a>.</p>
+		</footer>
+	</article>
+	<div id="leftContainer"></div>
+	<div id="rightContainer"></div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>fullsizeGallery Demo: Fullsceen Gallery</title>
+	<link rel="stylesheet" href="css/demo.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/fullsizegallery.css" type="text/css" media="all" />
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/modernizr-shiv.js"></script>
+	<script type="text/javascript" src="js/jquery-fullsizegallery.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('body').fullsizeGallery({
+			images		:	[
+				{	url: 'img/01.jpg'	},
+				{	url: 'img/02.jpg'	},
+				{	url: 'img/03.jpg'	},
+				{	url: 'img/04.jpg'	},
+				{	url: 'img/05.jpg'	},
+				{	url: 'img/06.jpg'	},
+				{	url: 'img/07.jpg'	},
+				{	url: 'img/08.jpg'	},
+				{	url: 'img/09.jpg'	},
+				{	url: 'img/10.jpg'	}
+			],
+			slideTimer	:	4000,
+			autostart	:	true,
+			showFunc	:	function( slide ) {
+								slide.fadeIn(1500);
+								$('#index').html( $('body').data('currentSlide')+1 );
+							}
+		});
+		
+		$('#start').click(function(ev){
+			ev.preventDefault();
+			$('body').fullsizeGallery('startSlideshow');
+			$('#status').trigger('updateStatus');
+		});
+
+		$('#stop').click(function(ev){
+			ev.preventDefault();
+			$('body').fullsizeGallery('stopSlideshow');
+			$('#status').trigger('updateStatus');
+		});
+		
+		$('#status').bind('updateStatus',function(){
+			$(this).html( $('body').data('slideshow')===true ? 'playing' : 'stopped' );
+		});
+		
+		$('#toggle').click(function(ev){
+			ev.preventDefault();
+			$('body').fullsizeGallery('toggleSlideshow');
+			$('#status').trigger('updateStatus');
+		});
+		
+		$('#next').click(function(ev){
+			ev.preventDefault();
+			$('body').fullsizeGallery('nextSlide');
+		});
+		
+		$('#previous').click(function(ev){
+			ev.preventDefault();
+			$('body').fullsizeGallery('previousSlide');
+		});
+
+	})
+
+	</script>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>fullsize<span>Gallery</span></h1>
+		</header>
+		<section>
+			<h2><span>Demo:</span> Fullscreen Gallery</h2>
+			<p>A fullscreen slideshow gallery with multiple navigation controls and status information.</p>
+		</section>
+		<section>
+			<p>Slideshow is <strong id="status">playing</strong>.</p>
+			<p>Current slide number: <strong id="index">1</strong></p>
+			<ul>
+				<li><a href="#" id="start">Start Slideshow</a></li>
+				<li><a href="#" id="stop">Stop Slideshow</a></li>
+				<li><a href="#" id="toggle">Toggle Slideshow</a></li>
+				<li><a href="#" id="next">Next Slide</a></li>
+				<li><a href="#" id="previous">Previous Slide</a></li>
+		</section>
+		<section class="back">
+			<p>&larr; <a href="demo.html" title="Return to demo index">back</a></p>
+		</section>
+		<footer>
+			<p><em>fullsizeGallery</em> is licensed under <a href="http://www.gnu.org/licenses/gpl-3.0" title="GPL v3">GPL v3</a>.</p>
+			<p>The images used in the demo are from <a href="http://suicidegirls.com" title="Suicide Girls - Beautiful naked girls with tattoos">SuicideGirls.com</a>.</p>
+		</footer>
+	</article>
+</body>
+</html>

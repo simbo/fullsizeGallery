@@ -1,0 +1,45 @@
+
+html, body {
+	height:100%;
+	margin:0;
+	overflow:auto;
+}
+
+.fullsizegallery,
+.fullsizegallery-list,
+.fullsizegallery-item,
+.fullsizegallery-image {
+	position:absolute;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}
+
+.fullsizegallery {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	z-index:-999;
+}
+
+.fullsizegallery-list {
+	list-style-type:none;
+}
+
+.fullsizegallery-item {
+	overflow:hidden;
+}
+
+.fullsizegallery-image {
+	position:absolute !important;
+	 -ms-interpolation-mode:bicubic;
+	image-rendering: optimizeQuality;
+}
+
+.fullsizegallery.speed .fullsizegallery-image {
+	-ms-interpolation-mode:nearest-neighbor;
+	image-rendering: -moz-crisp-edges;
+}

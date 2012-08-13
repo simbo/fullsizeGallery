@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>fullsizeGallery Demo: Fullsceen Slideshow</title>
+	<link rel="stylesheet" href="css/demo.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/fullsizegallery.css" type="text/css" media="all" />
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/modernizr-shiv.js"></script>
+	<script type="text/javascript" src="js/jquery-fullsizegallery.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('body').fullsizeGallery({
+			images		:	[
+				{	url: 'img/01.jpg'	},
+				{	url: 'img/02.jpg'	},
+				{	url: 'img/03.jpg'	},
+				{	url: 'img/04.jpg'	},
+				{	url: 'img/05.jpg'	},
+				{	url: 'img/06.jpg'	},
+				{	url: 'img/07.jpg'	},
+				{	url: 'img/08.jpg'	},
+				{	url: 'img/09.jpg'	},
+				{	url: 'img/10.jpg'	}
+			],
+			slideTimer	:	4000,
+			autostart	:	true,
+			showFunc	:	function( slide ) {
+								slide.closest('.fullsizegallery').addClass('speed');
+								slide.css('left',slide.width()).show().animate({
+									'left': 0
+								},{
+									queue: false,
+									duration: 1500,
+									transition: 'linear',
+									complete: function(){
+										slide.closest('.fullsizegallery').removeClass('speed');
+									}
+								})
+							},
+			hideFunc	:	$.noop
+		})
+
+	})
+
+	</script>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>fullsize<span>Gallery</span></h1>
+		</header>
+		<section>
+			<h2><span>Demo:</span> Fullscreen Slideshow</h2>
+			<p>A fullscreen slideshow with custom slide-in effect and image-rendering switch for better performance.</p>
+		</section>
+		<section class="back">
+			<p>&larr; <a href="demo.html" title="Return to demo index">back</a></p>
+		</section>
+		<footer>
+			<p><em>fullsizeGallery</em> is licensed under <a href="http://www.gnu.org/licenses/gpl-3.0" title="GPL v3">GPL v3</a>.</p>
+			<p>The images used in the demo are from <a href="http://suicidegirls.com" title="Suicide Girls - Beautiful naked girls with tattoos">SuicideGirls.com</a>.</p>
+		</footer>
+	</article>
+</body>
+</html>
