@@ -36,6 +36,7 @@ code, pre {
 }
 
 article {
+	position:relative;
 	margin:4em auto;
 	width:30em;
 	background:rgba(255,255,255,.8);
@@ -145,4 +146,17 @@ article li span {
 	color:#333;
 	font-size:.85em;
 	line-height:1.2em;
+}
+
+#maximize {
+	font-family:sans-serif;
+	position:absolute;
+	top:0;
+	left:0;
+	width:16px;
+	height:16px;
+	line-height:16px;
+	text-align:center;
+	color:#ff69b4;
+	cursor:pointer;
 }
